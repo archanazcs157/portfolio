@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Archana Boopathi — Portfolio</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#7dd3fc;--muted:#94a3b8;--glass:rgba(255,255,255,0.03)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;background:linear-gradient(180deg,#071024 0%, var(--bg) 100%);color:#e6eef8;line-height:1.5}
+    .container{max-width:980px;margin:32px auto;padding:0 20px}
+
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .avatar{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;font-weight:700;color:#042f46;overflow:hidden}
+    .avatar img{width:100%;height:100%;object-fit:cover;border-radius:12px}
+    nav{display:flex;gap:14px}
+    nav a{color:var(--muted);text-decoration:none;font-size:15px}
+    nav a:hover{color:var(--accent)}
+
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:28px;align-items:center;margin-bottom:28px}
+    .card{background:var(--card);padding:22px;border-radius:14px;box-shadow:0 6px 20px rgba(2,6,23,0.6);backdrop-filter:blur(6px)}
+    h1{margin:0 0 8px;font-size:28px}
+    p.lead{margin:0;color:var(--muted)}
+
+    .photo{width:100%;height:320px;border-radius:12px;background-image:url('1751535885730.jpg');background-size:cover;background-position:center}
+    .info-list{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--glass);color:var(--accent);font-weight:600}
+
+    section{margin-bottom:22px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .skill{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:12px;border-radius:10px;text-align:center}
+    .skill small{display:block;color:var(--muted)}
+
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .proj{border-radius:10px;overflow:hidden;background:#081323}
+    .proj img{width:100%;display:block}
+    .proj .pbody{padding:12px}
+    .pbody h4{margin:0 0 6px}
+    .pbody p{margin:0;color:var(--muted);font-size:14px}
+
+    footer{color:var(--muted);font-size:14px;text-align:center;padding:28px 0}
+
+    /* responsive */
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .projects{grid-template-columns:1fr}
+    }
+    @media(max-width:520px){
+      .grid{grid-template-columns:1fr}
+      nav{display:none}
+    }
+
+    /* small utilities */
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#042f46;font-weight:700;text-decoration:none}
+    .muted{color:var(--muted)}
+
+    /* contact form */
+    form input, form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    form label{display:block;margin:8px 0 6px}
+    .row{display:flex;gap:12px}
+    .row .col{flex:1}
+    @media(max-width:640px){.row{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar"><img src="1751535885730.jpg" alt="Archana Boopathi"></div>
+        <div>
+          <div style="font-weight:700">Archana Boopathi</div>
+          <div class="muted" style="font-size:13px">SEO • SMM • Web Designer</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="card">
+          <h1>Hi — I'm Archana</h1>
+          <p class="lead">From Krishnagiri, I work with SEO, Social Media Marketing, and web technologies like HTML & CSS. I also have experience with Windows and Linux environments.</p>
+
+          <div class="info-list">
+            <div><span class="badge">Open to work</span> <span class="muted">• Based in Krishnagiri, India</span></div>
+            <div class="muted">Email: <a class="muted" href="mailto:yourname@example.com">yourname@example.com</a></div>
+            <div class="muted">Phone: +91 99999 99999</div>
+          </div>
+
+          <div style="margin-top:14px">
+            <a class="btn" href="#projects">See my work</a>
+            <a style="margin-left:10px;color:var(--muted);text-decoration:none" href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card photo"></div>
+          <div style="height:14px"></div>
+          <div class="card">
+            <h3 style="margin:0 0 8px">Quick bio</h3>
+            <p class="muted" style="margin:0">Archana Boopathi is passionate about SEO, SMM, and web development. Skilled in HTML, CSS, and comfortable working with both Windows and Linux systems.</p>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about" class="card">
+        <h2>About</h2>
+        <p class="muted">I am Archana from Krishnagiri. I focus on SEO, Social Media Marketing, and front-end technologies like HTML and CSS. I also enjoy experimenting with different operating systems, especially Windows and Linux. I love learning and adapting to new challenges.</p>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="grid" style="margin-top:12px">
+          <div class="skill"><strong>SEO</strong><small>2 years</small></div>
+          <div class="skill"><strong>SMM</strong><small>2 years</small></div>
+          <div class="skill"><strong>HTML</strong><small>3 years</small></div>
+          <div class="skill"><strong>CSS</strong><small>3 years</small></div>
+          <div class="skill"><strong>Windows</strong><small>OS Expertise</small></div>
+          <div class="skill"><strong>Linux</strong><small>OS Expertise</small></div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects" style="margin-top:12px">
+          <div class="proj">
+            <img src="https://via.placeholder.com/800x400?text=SEO+Project" alt="SEO Project">
+            <div class="pbody">
+              <h4>SEO Project</h4>
+              <p class="muted">Optimized a website for search engines, improving traffic and ranking.</p>
+            </div>
+          </div>
+
+          <div class="proj">
+            <img src="https://via.placeholder.com/800x400?text=SMM+Campaign" alt="SMM Campaign">
+            <div class="pbody">
+              <h4>SMM Campaign</h4>
+              <p class="muted">Planned and executed a social media campaign for brand awareness.</p>
+            </div>
+          </div>
+
+          <div class="proj">
+            <img src="https://via.placeholder.com/800x400?text=HTML+CSS+Website" alt="HTML CSS Website">
+            <div class="pbody">
+              <h4>Portfolio Website</h4>
+              <p class="muted">Designed and coded a responsive website using HTML and CSS.</p>
+            </div>
+          </div>
+
+          <div class="proj">
+            <img src="https://via.placeholder.com/800x400?text=Linux+Setup" alt="Linux Setup">
+            <div class="pbody">
+              <h4>Linux Setup</h4>
+              <p class="muted">Configured and managed Linux environment for a small project.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="card">
+        <h2>Contact</h2>
+        <p class="muted">Want to work together? Send a message — this form uses mailto: so it opens your email client.</p>
+        <form onsubmit="sendEmail(event)">
+          <label for="name">Name</label>
+          <input id="name" required placeholder="Your name">
+
+          <label for="email">Email</label>
+          <input id="email" type="email" required placeholder="you@example.com">
+
+          <label for="message">Message</label>
+          <textarea id="message" rows="4" placeholder="Write a short message..." required></textarea>
+
+          <div style="margin-top:10px">
+            <button class="btn" type="submit">Send message</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div>Made with ❤️ by Archana Boopathi • <span class="muted">© <span id="year"></span></span></div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function sendEmail(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const msg = document.getElementById('message').value.trim();
+      const subject = encodeURIComponent('Portfolio contact from ' + name);
+      const body = encodeURIComponent('Name: '+name + '\nEmail: '+email + '
